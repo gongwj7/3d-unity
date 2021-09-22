@@ -7,7 +7,7 @@
 井字棋游戏，有pvp和pve两种模式供选择，并带有背景音乐
 
 ## **游戏截图**
-![](picture/demo1.PNG) 
+![](picture/demo1.png) 
 
 ## **实现过程**
 **Reset():**  
@@ -40,27 +40,27 @@ void Reset () {
 				return Chessboard[0][i];
 			}
 		}
- ```
+```
  斜线获胜
- ```c#
+```c#
 		if (Chessboard[1][1] != 0 &&
 		    Chessboard[0][0]== Chessboard[1][1] && Chessboard[2][2] == Chessboard[1][1] ||
 		    Chessboard[0][2] == Chessboard[1][1] && Chessboard[2][0] == Chessboard[1][1]) {
 			return Chessboard[1][1];
 		}
-	```
+```
   对局继续
-  ```c#
+```c#
 		for (int i = 0; i < 3; ++i) {
 			for (int j = 0; j < 3; ++j) {
 				if (Chessboard[i][j] == 0) return 0;
 			}
 		}
-	```
+```
   平局
-  ```c#
+```c#
 		return 0;
-  ```
+```
 **pvp():**  
 先绘制已经下好的棋子，再判断游戏是否结束，若没结束则根据turn的值进行本次点击，更改多维数组的值
 ```c#
@@ -182,11 +182,11 @@ AI落子函数，在这个函数中AI会比较简单的选择局部最优的选�
 **audiosource**
 设置AudioSource组件
 首先选择Add component
-![](picture/演示1.PNG) 
+![](picture/演示1.png) 
 而后选择Audio Sourse
-![](picture/演示2.PNG) 
+![](picture/演示2.png) 
 最后选择素材就ok了~
-![](picture/演示3.PNG) 
+![](picture/演示3.png) 
 ```c#
 private void Awake() {
 		audioSource= this.gameObject.GetComponent<AudioSource>();
